@@ -1,0 +1,14 @@
+#include "types.h"
+#include "stat.h"
+#include "user.h"
+
+int
+main(int argc, char *argv[])
+{
+  setpriorit(7);
+  printf(1, "(pid: %d) priority: %d\n", getpid(), getpriority());  
+  sleep(1);
+  sleep(1);
+  printf(1, "(pid: %d) priority: %d\n", getpid(), getpriority());
+  exit();
+}
